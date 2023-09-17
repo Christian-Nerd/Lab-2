@@ -1,0 +1,27 @@
+PROBLEM STATEMENT:
+A widget is on sale. Given the retail price and the discount rate, what is the sale price? What is the total price of the item once the sales tax is added?
+
+Step 1. Find the Sales Tax and store that as a constant
+
+Step 2. Make the user input wholesale price, mark up rate(as percentage not decimal), discount rate(as percentage not decimal) store each in a variable 
+
+Step 3. wholesale price + mark up rate/100 - (whole sale price + mark up rate/100) * discount rate/100 = sale price
+
+Step 4 sale price + sale price * Sales tax = total price
+
+Step 5: Output total price 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
