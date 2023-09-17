@@ -29,7 +29,7 @@ int main()
     cout << " Enter the percentage discount rate of the product ";
     cin >> discountRate;
     discountRate /= 100;
-    totalPrice = salePrice * SALE_TAX -(salePrice-discountRate);
+    totalPrice = salePrice * SALE_TAX -(salePrice*discountRate);
     string stringTotalPrice = to_string(totalPrice);
     cout << " The total price amounts to " << stringTotalPrice;
     return 0;
