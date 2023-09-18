@@ -5,9 +5,9 @@ Step 1. Find the Sales Tax and store that as a constant
 
 Step 2. Make the user input wholesale price, mark up rate(as percentage not decimal), discount rate(as percentage not decimal) store each in a variable 
 
-Step 3. wholesale price + mark up rate/100 - (whole sale price + mark up rate/100) * discount rate/100 = sale price
+Step 3. wholesale price + (wholesale price * mark up rate/100) - (whole sale price * discount rate/100) = sale price
 
-Step 4 sale price + sale price * Sales tax = total price
+Step 4 sale price + (sale price * NY Sales tax) = total price
 
 Step 5: Output total price 
 

@@ -15,11 +15,12 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    const double SALE_TAX = 1.0825;
+    const double SALE_TAX = .0875;
     double wholePrice, markupRate, salePrice, discountRate, totalPrice;
     cout << " Enter the whole price of the product ";
     cin >> wholePrice;
@@ -29,7 +30,8 @@ int main()
     cout << " Enter the percentage discount rate of the product ";
     cin >> discountRate;
     discountRate /= 100;
-    totalPrice = salePrice * SALE_TAX -(salePrice*discountRate);
+    totalPrice = salePrice - (salePrice*discountRate) + (salePrice - (salePrice*discountRate))*SALE_TAX;
+    totalPrice = round((totalPrice * 100)) / 100;
     string stringTotalPrice = to_string(totalPrice);
     cout << " The total price amounts to " << stringTotalPrice;
     return 0;
