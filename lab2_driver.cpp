@@ -9,7 +9,7 @@
 //
 //Date Written:        11 September 2023
 //
-//Date Last Revised:   17 September 2023
+//Date Last Revised:   18 September 2023
 //
 //*****************************************************************************
 
@@ -33,6 +33,23 @@ int main()
     totalPrice = salePrice - (salePrice*discountRate) + (salePrice - (salePrice*discountRate))*SALE_TAX;
     totalPrice = (double)round((totalPrice * 100)) / 100;
     string stringTotalPrice = to_string(totalPrice);
+    //string decimalTotalPrice = stringTotalPrice.substr();
+    unsigned long trailingZeroes = stringTotalPrice.find_last_not_of('0', string::npos);//Lists the character last at the end of the string that isn't a zero.
+    if(stringTotalPrice.at(trailingZeroes) == '.')
+    {
+        if(stringTotalPrice.at(trailingZeroes+2)!= 0)
+        {
+            stringTotalPrice.erase(trailingZeroes+3);
+        }
+        else
+        {
+            stringTotalPrice.erase(trailingZeroes+1);
+        }
+    }
+    else
+    {
+        stringTotalPrice.erase(trailingZeroes+1, stringTotalPrice.size());
+    }
     cout << " The total price amounts to " << stringTotalPrice;
     return 0;
 }
