@@ -31,7 +31,7 @@ int main()
     cin >> discountRate;
     discountRate /= 100;
     totalPrice = salePrice - (salePrice*discountRate) + (salePrice - (salePrice*discountRate))*SALE_TAX;
-    totalPrice = round((totalPrice * 100)) / 100;
+    totalPrice = (double)round((totalPrice * 100)) / 100;
     string stringTotalPrice = to_string(totalPrice);
     cout << " The total price amounts to " << stringTotalPrice;
     return 0;
